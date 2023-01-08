@@ -1,0 +1,15 @@
+{% extends 'cnc_mashine/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+{% if cnc_name.photo %}
+<p><img class="img-article-left thumb" src="{{cnc_name.photo.url}}"></p>
+{% endif %}
+<ul class="langitem">
+		<li>Рабочее поле - {{cnc_name.work_pole}}</li>
+	    <li>Тип лазера - {{cnc_name.emitter_type}}</li>
+		<li>Мощность лазера - {{cnc_name.power_laser}}</li>
+		<li>Габариты - {{cnc_name.dimensions}}</li>
+</ul>
+<p class="price-on-post">{{ cnc_name.price }}</p>
+{% endblock %}
